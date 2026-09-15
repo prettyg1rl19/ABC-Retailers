@@ -1,122 +1,556 @@
-# CLDV6212
-Welcome to ABC Retailers online! Where quality meets your cart! Now newly upgraded, you can sign in as either an admin or a customer! The admin can:
-- View orders,
-- Add/Delete customers,
-- Delete or edit orders,
-- View docments,
-- Logout,
-- Upload files related to orders.
-- But they cannot enter the Shop!
+# 🌸 ABC Retailers
 
-But, if you are logged in as a customer, you can do the following:
-- Enter the shop,
-- Add items to your cart,
-- View your cart,
-- View your order status,
-- Logout.
-- But as a customer, you will not habve the same priveleges as an admin. You cannot view the other customers, nor add/remove them.
+## Cloud-Based Retail Web Application
 
-## Website Link 🌸
-https://st10438767cldv6212wa-cqgwdtawhqfxhda0.canadacentral-01.azurewebsites.net 
+**ABC Retailers** is a cloud-enabled online retail platform developed using **ASP.NET Core MVC and Microsoft Azure**.
 
-## YouTube Video Link (Extra)🌹
-https://youtu.be/FKogGm8YjHI
-Please note that this is just an additional video showing one feature. The main video is in my submitted word document.
+The application provides separate experiences for **customers and administrators**, allowing customers to browse products, manage a shopping cart and track orders, while administrators can manage customers, orders and uploaded documents.
 
+The project demonstrates the integration of a web application with multiple Azure cloud services, including **Azure Functions, Blob Storage, Queue Storage and Table Storage**.
 
-## AI Annexure and disclosure of AI usage in my assignment 🤖
-Link to chat: https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0
-1.	Used ChatGPT to help me find a slogan for my website – 14 Aug. 25
-2.	Used ChatGPT to help me find colour schemes for the website. The suggestions have been discarded – 14 Aug. 25
-3.	Used ChatGPT to help me with the delete operation for Customers. I messed around with different types of code for this and asked chat if I’m on the right path. I tried to keep it as a last resort, only to help me with the errors I can’t seem to shake by myself. Worked down errors – all on my own – from 7 to 3. And then I didn’t know what to do further. – 19 Aug. 25
-  a.	Update, I was being dumb, and I saw my error. One word. I forgot to change Delete to DeleteCustomer :(
+---
 
-## Referencing list:
-Debendra Dash, 2024. Creating Shopping Cart Application From Scratch In MVC – Part Two. [Online]. Available at:
-https://www.c-sharpcorner.com/article/creating-shopping-cart-application-from-scratch-in-mvc-part2/ [Accessed 13 November 2025]
+## 🌐 Live Website
 
-Gaurav Gupta, 2013. Compare strings using StringComparison.OrdinalIgnoreCase 
-[online] Available at: <https://www.c-sharpcorner.com/blogs/compare-strings-using-stringcomparisonordinalignorecase1 > [Accessed 19 August 2025]
+**https://st10438767cldv6212wa-cqgwdtawhqfxhda0.canadacentral-01.azurewebsites.net**
 
-IIEVC School of Computer Science, 2025. CLDV6212 Building a Modern Web App with Azure Table Storage & ASP.NET Core MVC - Part 1
-[video online] Available at:<https://www.youtube.com/watch?v=Txp7VYUMBGQ&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=3> [Accessed 16 August 2025]. 
+---
 
-IIEVC School of Computer Science, 2025. CLDV6212 ASP.NET MVC & Azure Series - Part 2: Adding Image Uploads with Blob Storage!
-[video online] Available at:<https://www.youtube.com/watch?v=CuszKqZvRuM&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=4> [Accessed 16 August 2025]. 
+## 🎥 Demonstration Video
 
-IIEVC School of Computer Science, 2025. CLDV6212 ASP.NET MVC & Azure Series - Part 3: Never Lose Data Again with Queue Storage!
-[video online] Available at:<https://www.youtube.com/watch?v=VbZ3Pi63yEc&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=5> [Accessed 17 August 2025]. 
+**[Watch the ABC Retailers Feature Demonstration](https://youtu.be/FKogGm8YjHI)**
 
-IIEVC School of Computer Science, 2025. CLDV6212 ASP.NET MVC & Azure Series - Part 4: Mastering Azure File Share!
-[video online] Available at:<https://www.youtube.com/watch?v=A-mVVL88oEg&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=7> [Accessed 20 August 2025]. 
+> **Note:** This video is an additional demonstration showcasing one feature of the application. The main project demonstration is included in the submitted Word document.
 
-IIE Emeris School of Computer Science , 2025. CLDV6212 Azure functions part 1 Getting the basics out the way HTTP Trigger
-[video online] Available at:<https://www.youtube.com/watch?v=l7s5u-QzYe8&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=7> [Accessed 24 September 2025]. 
+---
 
-IIE Emeris School of Computer Science , 2025. CLDV6212 Azure functions part 2 Azure functions and queues triggers
-[video online] Available at:<https://www.youtube.com/watch?v=zP4umzRCsTM&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=8> [Accessed 25 September 2025].
+# ✨ Features
 
-IIE Emeris School of Computer Science , 2025. CLDV6212 Azure functions part 3 Azure functions and MVC
-[video online] Available at:<https://www.youtube.com/watch?v=x7yTh85fQbw&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=9> [Accessed 26 September 2025].
+ABC Retailers provides different functionality depending on the user's role.
 
-IIE Emeris School of Computer Science , 2025. CLDV6212 Azure functions part 4 Azure functions and MVC and blobs
-[video online] Available at:<https://www.youtube.com/watch?v=r-VksPFfFpE&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=10> [Accessed 27 September 2025].
+## 🛍️ Customer Experience
 
-IIE Emeris School of Computer Science , 2025. CLDV6212 Azure functions part 5 Azure functions publish
-[video online] Available at:<https://www.youtube.com/watch?v=GXGN-aWbwO0&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=11> [Accessed 6 October 2025].
+Customers can:
 
-Microsoft Learn, 2024. .NET cryptography model. [Online]. Available at:
-https://learn.microsoft.com/en-us/dotnet/standard/security/cryptography-model [Accessed 12 November 2025]
+* Sign in to the application
+* Enter the online shop
+* Browse available products
+* Add products to their shopping cart
+* View their cart
+* View their orders
+* Check their order status
+* Log out securely
 
-Microsoft Learn, 2022. Hash passwords in ASP.NET Core. [Online]. Available at:
-https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/consumer-apis/password-hashing?view=aspnetcore-9.0 [Accessed 12 November 2025] 
+Customers only have access to their own customer functionality and cannot access administrative operations.
 
-Microsoft Learn, 2025. Session and state management in ASP.NET Core. [Online]. Available at:
-https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-9.0 [Accessed 11 November 2025]
+---
 
-Microsoft Learn, 2022. Shopping Cart. [Online]. Available at:
-https://learn.microsoft.com/en-us/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart [Accessed 13 November 2025]
+## 👩‍💼 Administrator Experience
 
-MicrosoftLearn, 2025. StringComparer.OrdinalIgnoreCase Property 
-[online] Available at: <https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer.ordinalignorecase?view=net-9.0> [Accessed 19 August 2025]
+Administrators have access to additional management functionality.
 
-Microsoft, 2025. TableUpdateMode Enum
-[online] Available at: <https://learn.microsoft.com/en-us/dotnet/api/azure.data.tables.tableupdatemode?view=azure-dotnet> [Accessed 21 August 2025].
+Administrators can:
 
-Mustafa Can Sener, 2025. User Registration and Login with .NET Core MVC and Entity Framework. [Online]. Available at:
-https://readmedium.com/user-registration-and-login-with-net-core-mvc-and-entity-framework-68793aa97e02 [Accessed 12 November 2025]
+* Sign in as an administrator
+* View customer orders
+* Add customers
+* Delete customers
+* View customers
+* Edit orders
+* Delete orders
+* View uploaded documents
+* Upload files associated with orders
+* Log out
 
-Mrzyg?ód, K., 2022. Azure for Developers.
+Administrative functionality is separated from the customer shopping experience.
 
-OpenAI. 2025. Chat-GPT (OpenAI's GPT-5-turbo model). [Large language model]. 
-Available at: https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0 [Accessed: 14 August 2025]
+---
 
-w3schools, 2025. Create A Filtered Table
-[online] Available at: <https://www.w3schools.com/howto/howto_js_filter_table.asp > [Accessed 20 August 2025].
+# ☁️ Cloud Architecture
 
-w3schools, 2025. CSS Colors
-[online] Available at: <https://www.w3schools.com/css/css_colors.asp> [Accessed 13 August 2025].
+The application makes use of several Microsoft Azure services to provide cloud-based functionality.
 
-w3schools, 2025. CSS Fonts
-[online] Available at: <https://www.w3schools.com/css/css_font.asp> [Accessed 13 August 2025].
+```text
+                         ┌─────────────────────┐
+                         │       Customer      │
+                         │       Browser       │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │   ASP.NET Core MVC  │
+                         │   Web Application   │
+                         └──────────┬──────────┘
+                                    │
+             ┌──────────────────────┼──────────────────────┐
+             │                      │                      │
+             ▼                      ▼                      ▼
+     ┌───────────────┐      ┌───────────────┐      ┌───────────────┐
+     │ Azure         │      │ Azure Storage │      │ Azure Queue   │
+     │ Functions     │      │ Services      │      │ Storage       │
+     └───────┬───────┘      └───────┬───────┘      └───────────────┘
+             │                      │
+       ┌─────┼─────┐          ┌─────┼─────┐
+       │     │     │          │     │     │
+       ▼     ▼     ▼          ▼     ▼     ▼
+    Login  Orders Products  Blob  Tables Files
+```
 
-w3schools, 2025. CSS Gradients
-[online] Available at: <https://www.w3schools.com/css/css3_gradients.asp> [Accessed 13 August 2025].
+---
 
-w3schools, 2025. CSS Outline
-[online] Available at: <https://www.w3schools.com/css/css_outline.asp> [Accessed 13 August 2025].
+# ⚡ Azure Functions
 
-w3schools, 2025. CSS Tables
-[online] Available at: <https://www.w3schools.com/css/css_table.asp> [Accessed 27 August 2025]
+The solution contains multiple Azure Function projects responsible for specific cloud-based operations.
 
-w3schools, 2025. CSS text-align Property
-[online] Available at: <https://www.w3schools.com/cssref/pr_text_text-align.php> [Accessed 28 August 2025].
+These include functionality relating to:
 
-w3schools, 2025. HTML <tbody> Tag
-[online] Available at: <https://www.w3schools.com/tags/tag_tbody.asp> [Accessed 27 August 2025].
+* Authentication
+* Products
+* Orders
+* Files
+* Blob storage
+* Queue processing
+* Table storage
 
-w3schools, 2025. HTML <thead> Tag
-[online] Available at: <https://www.w3schools.com/tags/tag_thead.asp> [Accessed 27 August 2025].
+This approach separates individual cloud operations from the main MVC application.
 
-w3schools, 2025. How TO - Center Images
-[online] Available at: <https://www.w3schools.com/howto/howto_css_image_center.asp> [Accessed 28 August 2025].
+### Azure Function Projects
+
+The repository contains projects including:
+
+* `BlobFunction`
+* `FilesFunction`
+* `LoginAPI`
+* `OrderFunction`
+* `POEFunctions`
+* `ProductFunction`
+* `QueueFunction`
+* `TableFunction`
+* `Table_Function`
+* `TestQueue`
+
+---
+
+# 🗄️ Azure Storage
+
+Different Azure storage technologies are used for different requirements within the application.
+
+### Azure Blob Storage
+
+Used for handling uploaded files and documents associated with the application.
+
+### Azure Table Storage
+
+Used for storing structured application data using Azure Table Storage.
+
+### Azure Queue Storage
+
+Used to support asynchronous processing and communication between components.
+
+### Azure File Storage
+
+Used as part of the application's cloud file-management functionality.
+
+---
+
+# 🏗️ Application Architecture
+
+The project follows an **ASP.NET Core MVC architecture** for the main web application.
+
+```text
+ABC-Retailers
+│
+├── ABC_Retailers
+│   ├── Controllers
+│   ├── Models
+│   ├── Views
+│   ├── Services
+│   ├── wwwroot
+│   └── Configuration
+│
+├── BlobFunction
+│
+├── FilesFunction
+│
+├── LoginAPI
+│
+├── OrderFunction
+│
+├── POEFunctions
+│
+├── ProductFunction
+│
+├── QueueFunction
+│
+├── TableFunction
+│
+├── Table_Function
+│
+└── TestQueue
+```
+
+The MVC application is responsible for the user-facing experience, while Azure Functions provide supporting cloud functionality.
+
+---
+
+# 🧰 Technologies Used
+
+| Technology              | Purpose                              |
+| ----------------------- | ------------------------------------ |
+| **C#**                  | Application development              |
+| **ASP.NET Core MVC**    | Web application framework            |
+| **Razor**               | Dynamic web views                    |
+| **HTML5**               | Application structure                |
+| **CSS3**                | User interface and styling           |
+| **JavaScript**          | Client-side functionality            |
+| **Microsoft Azure**     | Cloud platform                       |
+| **Azure Functions**     | Serverless application functionality |
+| **Azure Blob Storage**  | File and document storage            |
+| **Azure Table Storage** | Cloud data storage                   |
+| **Azure Queue Storage** | Asynchronous processing              |
+| **Azure File Storage**  | Cloud file management                |
+| **Git/GitHub**          | Version control                      |
+
+---
+
+# 🔐 Role-Based Functionality
+
+ABC Retailers provides different privileges according to the authenticated user's role.
+
+| Functionality         | Customer | Administrator |
+| --------------------- | :------: | :-----------: |
+| Sign in               |     ✅    |       ✅       |
+| Browse shop           |     ✅    |       ❌       |
+| Add products to cart  |     ✅    |       ❌       |
+| View cart             |     ✅    |       ❌       |
+| View own order status |     ✅    |       ❌       |
+| View customer orders  |     ❌    |       ✅       |
+| Add customers         |     ❌    |       ✅       |
+| Delete customers      |     ❌    |       ✅       |
+| Edit orders           |     ❌    |       ✅       |
+| Delete orders         |     ❌    |       ✅       |
+| View documents        |     ❌    |       ✅       |
+| Upload order files    |     ❌    |       ✅       |
+
+This separation ensures that customers cannot access functionality intended for administrators.
+
+---
+
+# 🛒 Shopping Workflow
+
+The primary customer workflow follows a simple retail process:
+
+```text
+Sign In
+   │
+   ▼
+Browse Shop
+   │
+   ▼
+Select Products
+   │
+   ▼
+Add to Cart
+   │
+   ▼
+View Cart
+   │
+   ▼
+Place Order
+   │
+   ▼
+Track Order Status
+```
+
+---
+
+# 📦 Order Management
+
+Orders can be managed through both the customer and administrative sides of the application.
+
+### Customers
+
+Customers can:
+
+* View their orders
+* Review order information
+* Monitor order status
+
+### Administrators
+
+Administrators can:
+
+* View orders
+* Edit orders
+* Delete orders
+* Upload files associated with orders
+* View associated documents
+
+---
+
+# 📁 File & Document Management
+
+ABC Retailers incorporates cloud-based file functionality for documents associated with orders.
+
+Uploaded files are handled through Azure-backed functionality, allowing files to be stored independently from the main web application.
+
+This demonstrates the use of cloud storage for managing unstructured application data.
+
+---
+
+# 🎨 User Interface
+
+The interface is designed around a retail-focused experience with separate customer and administrator workflows.
+
+The customer interface prioritises:
+
+* Product discovery
+* Clear navigation
+* Shopping-cart interaction
+* Order visibility
+* Simple user flows
+
+The administrative interface prioritises:
+
+* Data management
+* Order management
+* Customer management
+* Document management
+* Administrative controls
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+To run the project locally, you should have:
+
+* Visual Studio 2022 or later
+* A compatible .NET SDK
+* An Azure account where required
+* Git
+* Access to the required Azure Storage services
+
+---
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/prettyg1rl19/ABC-Retailers.git
+```
+
+```bash
+cd ABC-Retailers
+```
+
+---
+
+## Open the Solution
+
+Open:
+
+```text
+ST10438767_CLDV6212.sln
+```
+
+in Visual Studio.
+
+Restore the required NuGet packages and ensure that the appropriate Azure configuration is available for the cloud services used by the application.
+
+---
+
+## Configuration
+
+Azure connection strings, storage settings and other environment-specific configuration should be stored securely.
+
+Do **not** commit:
+
+* Passwords
+* API keys
+* Connection strings containing credentials
+* Azure secrets
+* Other sensitive configuration
+
+For local development, use the appropriate ASP.NET Core configuration mechanisms or environment variables.
+
+---
+
+# 🧪 Testing the Application
+
+## Customer Workflow
+
+1. Open the application.
+2. Sign in as a customer.
+3. Enter the shop.
+4. Browse available products.
+5. Add products to the cart.
+6. View the cart.
+7. Place or view an order.
+8. Check the order status.
+9. Log out.
+
+## Administrator Workflow
+
+1. Open the application.
+2. Sign in as an administrator.
+3. Access the administrative functionality.
+4. View customers and orders.
+5. Add or delete customers.
+6. Edit or delete orders.
+7. View documents.
+8. Upload order-related files.
+9. Log out.
+
+---
+
+# 📚 References
+
+The following resources were consulted during the development of ABC Retailers.
+
+### C# & ASP.NET MVC
+
+**Dash, D. (2024).** Creating Shopping Cart Application From Scratch In MVC – Part Two. *C# Corner*.
+https://www.c-sharpcorner.com/article/creating-shopping-cart-application-from-scratch-in-mvc-part2/
+
+**Gupta, G. (2013).** Compare strings using StringComparison.OrdinalIgnoreCase. *C# Corner*.
+https://www.c-sharpcorner.com/blogs/compare-strings-using-stringcomparisonordinalignorecase1
+
+**Sener, M. C. (2025).** User Registration and Login with .NET Core MVC and Entity Framework. *Medium*.
+https://readmedium.com/user-registration-and-login-with-net-core-mvc-and-entity-framework-68793aa97e02
+
+---
+
+### Microsoft Learn
+
+**Microsoft Learn. (2024).** .NET cryptography model.
+https://learn.microsoft.com/en-us/dotnet/standard/security/cryptography-model
+
+**Microsoft Learn. (2022).** Hash passwords in ASP.NET Core.
+https://learn.microsoft.com/en-us/aspnet/core/security/data-protection/consumer-apis/password-hashing
+
+**Microsoft Learn. (2025).** Session and state management in ASP.NET Core.
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/app-state
+
+**Microsoft Learn. (2022).** Shopping Cart.
+https://learn.microsoft.com/en-us/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
+
+**Microsoft Learn. (2025).** StringComparer.OrdinalIgnoreCase Property.
+https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparer.ordinalignorecase
+
+**Microsoft. (2025).** TableUpdateMode Enum.
+https://learn.microsoft.com/en-us/dotnet/api/azure.data.tables.tableupdatemode
+
+---
+
+### Azure & Cloud Development Tutorials
+
+**IIEVC School of Computer Science. (2025).** CLDV6212 Building a Modern Web App with Azure Table Storage & ASP.NET Core MVC – Part 1.
+https://www.youtube.com/watch?v=Txp7VYUMBGQ
+
+**IIEVC School of Computer Science. (2025).** CLDV6212 ASP.NET MVC & Azure Series – Part 2: Adding Image Uploads with Blob Storage!
+https://www.youtube.com/watch?v=CuszKqZvRuM
+
+**IIEVC School of Computer Science. (2025).** CLDV6212 ASP.NET MVC & Azure Series – Part 3: Never Lose Data Again with Queue Storage!
+https://www.youtube.com/watch?v=VbZ3Pi63yEc
+
+**IIEVC School of Computer Science. (2025).** CLDV6212 ASP.NET MVC & Azure Series – Part 4: Mastering Azure File Share!
+https://www.youtube.com/watch?v=A-mVVL88oEg
+
+**IIE Emeris School of Computer Science. (2025).** CLDV6212 Azure Functions Part 1: Getting the Basics Out the Way — HTTP Trigger.
+https://www.youtube.com/watch?v=l7s5u-QzYe8
+
+**IIE Emeris School of Computer Science. (2025).** CLDV6212 Azure Functions Part 2: Azure Functions and Queues Triggers.
+https://www.youtube.com/watch?v=zP4umzRCsTM
+
+**IIE Emeris School of Computer Science. (2025).** CLDV6212 Azure Functions Part 3: Azure Functions and MVC.
+https://www.youtube.com/watch?v=x7yTh85fQbw
+
+**IIE Emeris School of Computer Science. (2025).** CLDV6212 Azure Functions Part 4: Azure Functions, MVC and Blobs.
+https://www.youtube.com/watch?v=r-VksPFfFpE
+
+**IIE Emeris School of Computer Science. (2025).** CLDV6212 Azure Functions Part 5: Azure Functions Publish.
+https://www.youtube.com/watch?v=GXGN-aWbwO0
+
+---
+
+### Azure for Developers
+
+**Mrzygłód, K. (2022).** *Azure for Developers.*
+
+---
+
+### Web Development
+
+**W3Schools. (2025).** Create a Filtered Table.
+https://www.w3schools.com/howto/howto_js_filter_table.asp
+
+**W3Schools. (2025).** CSS Colors.
+https://www.w3schools.com/css/css_colors.asp
+
+**W3Schools. (2025).** CSS Fonts.
+https://www.w3schools.com/css/css_font.asp
+
+**W3Schools. (2025).** CSS Gradients.
+https://www.w3schools.com/css/css3_gradients.asp
+
+**W3Schools. (2025).** CSS Outline.
+https://www.w3schools.com/css/css3_outline.asp
+
+**W3Schools. (2025).** CSS Tables.
+https://www.w3schools.com/css/css_table.asp
+
+**W3Schools. (2025).** CSS text-align Property.
+https://www.w3schools.com/cssref/pr_text_text-align.php
+
+**W3Schools. (2025).** HTML `<tbody>` Tag.
+https://www.w3schools.com/tags/tag_tbody.asp
+
+**W3Schools. (2025).** HTML `<thead>` Tag.
+https://www.w3schools.com/tags/tag_thead.asp
+
+**W3Schools. (2025).** How To — Center Images.
+https://www.w3schools.com/howto/howto_css_image_center.asp
+
+---
+
+# 🤖 AI Usage Disclosure
+
+AI tools were used during development as an **assistive resource**, rather than as a replacement for the development process.
+
+ChatGPT was used for:
+
+1. Finding potential slogan ideas for the website.
+2. Exploring colour-scheme ideas. The suggested colour schemes were ultimately discarded.
+3. Troubleshooting the customer deletion operation and checking whether the implementation approach was correct.
+
+The final implementation was developed, tested and corrected by the project author.
+
+### AI Disclosure
+
+**OpenAI. (2025).** ChatGPT (GPT-5-turbo). [Large language model].
+https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0
+
+---
+
+# 👩‍💻 Project Author
+
+**Prettyg1rl19**
+
+ABC Retailers was developed as a practical demonstration of:
+
+* Application development
+* ASP.NET Core MVC
+* Cloud computing
+* Azure Functions
+* Azure Storage
+* Authentication
+* CRUD operations
+* E-commerce workflows
+* Responsive web development
+
+---
+
+## 🌸 ABC Retailers
+
+> **Where quality meets your cart.**
