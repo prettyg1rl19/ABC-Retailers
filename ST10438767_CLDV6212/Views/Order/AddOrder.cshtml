@@ -1,0 +1,67 @@
+﻿@model ST10438767_CLDV6212.Models.Order
+
+<style>
+    body {
+        height: 200px;
+        background-image: linear-gradient(to bottom right, rgba(207, 187, 153), rgba(229, 215, 196));
+    }
+</style>
+
+@{
+    var customers = ViewData["Customer"] as List<ST10438767_CLDV6212.Models.Customer>;
+    var products = ViewData["Product"] as List<ST10438767_CLDV6212.Models.Product>;
+}
+
+<h1 style="color:rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Place an Order</h1>
+
+@if (customers == null || customers.Count == 0 || products == null || products.Count == 0)
+{
+    <div class="alert alert-warning">
+        No customers or orders available. Please ensure they're added first.
+    </div>
+}
+else
+{
+    <form asp-action="AddOrder" method="post">
+        <div class="form-group">
+            <label asp-for="Customer_Id">Select a Customer</label>
+            <select asp-for="Customer_Id" class="form-control"
+                    asp-items="@(new SelectList(customers, "Customer_Id", "Customer_Name"))">
+                <option value="">-- Select Customer --</option>
+            </select>
+            <span asp-validation-for="Customer_Id" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product_ID">Select Product</label>
+            <select asp-for="Product_ID" class="form-control"
+                    asp-items="@(new SelectList(products, "Product_ID", "Product_Name"))">
+                <option value="">-- Select Product --</option>
+            </select>
+            <span asp-validation-for="Product_ID" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity">Select a Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+            <span asp-validation-for="Product_ID" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Delivery_Location">Select a Location</label>
+            <input asp-for="Delivery_Location" class="form-control" />
+            <span asp-validation-for="Delivery_Location" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Delivery_Date">Select a Date</label>
+            <input asp-for="Delivery_Date" class="form-control" type="datetime-local" />
+            <span asp-validation-for="Delivery_Date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Order_Status">Add an Order Status</label>
+            <input asp-for="Order_Status" class="form-control" />
+            <span asp-validation-for="Order_Status" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="background: rgba(136, 144, 99); outline-color: rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Submit Order</button>
+    </form>
+
+    /*IIEVC School of Computer Science, 2025. CLDV6212 ASP.NET MVC & Azure Series - Part 3: Never Lose Data Again with Queue Storage!
+    [video online] Available at:<https://www.youtube.com/watch?v=VbZ3Pi63yEc&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=5> [Accessed 17 August 2025]. */
+}

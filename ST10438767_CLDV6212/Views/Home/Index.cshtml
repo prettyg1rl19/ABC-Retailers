@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    body {
+        background-color: rgb(229, 215, 196); 
+    }
+
+    .card {
+        background-color: rgb(207, 187, 153); 
+        border: none;
+        border-radius: 12px;
+    }
+
+    .card-body {
+        color: rgb(53, 64, 36);
+    }
+
+    h3 {
+        color: rgb(76, 61, 25); 
+    }
+
+    .form-control {
+        border: 1px solid rgb(136, 144, 99);
+    }
+
+    .btn-primary {
+        background-color: rgb(76, 61, 25); 
+        border-color: rgb(76, 61, 25);
+    }
+
+    .btn-outline-secondary {
+        color: rgb(76, 61, 25);
+        border-color: rgb(76, 61, 25);
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: rgb(76, 61, 25);
+            color: white;
+        }
+
+    .alert-danger {
+        background-color: rgb(136, 144, 99);
+        color: white;
+        border: none;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg">
+                <div class="card-body px-4 py-5">
+                    <h3 class="text-center mb-4 fw-bold">Welcome Back</h3>
+                    <form asp-action="Login" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email" required />
+                            <label for="emailInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password" required />
+                            <label for="passwordInput">Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 mb-3">Login</button>
+                    </form>
+
+                    <div class="d-flex justify-content-between">
+                        <form asp-action="Register" method="get" class="me-2 w-50">
+                            <button type="submit" class="btn btn-outline-secondary w-100">Register</button>
+                        </form>
+                        <form asp-action="PasswordSet" method="get" class="ms-2 w-50">
+                            <button type="submit" class="btn btn-outline-secondary w-100">Set Password</button>
+                        </form>
+                    </div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger mt-4">@ViewBag.Error</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--w3schools, 2025. CSS Forms
+[online] Available at: < https://www.w3schools.com/css/css_form.asp > [Accessed 14 November 2025].
+
+w3schools, 2025. CSS Styling Buttons
+[online] Available at: < https://www.w3schools.com/css/css3_buttons.asp > [Accessed 14 November 2025].
+-->

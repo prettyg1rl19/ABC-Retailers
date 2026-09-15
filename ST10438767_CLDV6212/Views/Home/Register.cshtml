@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    body {
+        background-color: rgb(229, 215, 196); 
+    }
+
+    .card {
+        background-color: rgb(207, 187, 153); 
+        border: none;
+        border-radius: 12px;
+    }
+
+    .card-body {
+        color: rgb(53, 64, 36); 
+    }
+
+    h2 {
+        color: rgb(76, 61, 25);
+    }
+
+    .form-control {
+        border: 1px solid rgb(136, 144, 99); 
+    }
+
+    .btn-primary {
+        background-color: rgb(76, 61, 25); 
+        border-color: rgb(76, 61, 25);
+    }
+
+        .btn-primary:hover {
+            background-color: rgb(53, 64, 36); 
+            border-color: rgb(53, 64, 36);
+        }
+
+    .alert-danger {
+        background-color: rgb(136, 144, 99);
+        color: white;
+        border: none;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg">
+                <div class="card-body px-4 py-5">
+                    <h2 class="text-center mb-4 fw-bold">Register</h2>
+                    <form asp-action="Register" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="customerName" class="form-control" id="fullName" placeholder="Full Name" required />
+                            <label for="fullName">Full Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="customerEmail" class="form-control" id="emailInput" placeholder="Email" value="@ViewBag.Email" required />
+                            <label for="emailInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" name="customerAddress" class="form-control" id="addressInput" placeholder="Address" />
+                            <label for="addressInput">Address</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
+                    </form>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger mt-4">@ViewBag.Error</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+w3schools, 2025. CSS Forms
+[online] Available at: < https://www.w3schools.com/css/css_form.asp > [Accessed 14 November 2025].
+
+w3schools, 2025. CSS Styling Buttons
+[online] Available at: < https://www.w3schools.com/css/css3_buttons.asp > [Accessed 14 November 2025].
+-->

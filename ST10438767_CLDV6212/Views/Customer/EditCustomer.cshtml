@@ -1,0 +1,28 @@
+﻿@model ST10438767_CLDV6212.Models.Customer
+
+<style>
+    body {
+        height: 200px;
+        background-image: linear-gradient(to bottom right, rgba(207, 187, 153), rgba(229, 215, 196));
+    }
+</style>
+
+<h1 style="color:rgba(76, 61, 25); font-family:'Times New Roman', Times, serif">Edit a Customer</h1>
+
+<form asp-action="AddCustomer" method="post">
+    <div class="form-group">
+        <label asp-for="Customer_Name" class="control-label"></label>
+        <input asp-for="Customer_Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Email" class="control-label"></label>
+        <input asp-for="Customer_Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer_Address" class="control-label"></label>
+        <input asp-for="Customer_Address" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary w-100" style="background: rgba(136, 144, 99); outline-color: rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">
+        Save Changes
+    </button>
+</form>

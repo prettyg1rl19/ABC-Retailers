@@ -1,0 +1,126 @@
+﻿@model List<ST10438767_CLDV6212.Models.FileModel>
+
+<style>
+    body {
+        height: 200px;
+        background-image: linear-gradient(to bottom right, rgba(207, 187, 153), rgba(229, 215, 196));
+    }
+
+    table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(207, 187, 153);
+    }
+
+    tr:hover {
+        background-color: rgba(136, 144, 99);
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgba(136, 144, 99);
+        color: rgba(53, 64, 36);
+    }
+</style>
+
+<!-- w3schools, 2025. CSS Tables
+    [online] Available at: <https://www.w3schools.com/css/css_table.asp> [Accessed 27 August 2025].-->
+
+<header style="background-color:rgba(136, 144, 99)">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:rgba(136, 144, 99)">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ABC Retailers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="background-color:rgba(136, 144, 99)">
+                <ul class="navbar-nav flex-grow-1" style="background-color:rgba(136, 144, 99)">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customer Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product Inforation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">Order Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Files" asp-action="Index">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-danger w-100 mt-3">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h1 style="color:rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Files</h1>
+
+<!-- Display any messages-->
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">
+        @TempData["Message"] 
+    </div>
+}
+
+<!--Upload form-->
+<form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Choose a file to upload:</label>
+        <input type="file" name="file" class="form-control" />
+        <button type="submit" class="btn btn-primary w-100" style="background: rgba(136, 144, 99); outline-color: rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Upload File</button>
+    </div>
+</form>
+
+<!-- Display uploaded files -->
+<h4 style="color:rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Uploaded Documents: </h4>
+@if (Model != null && Model.Count > 0)
+{
+    <!-- w3schools, 2025. CSS Tables
+    [online] Available at: <https://www.w3schools.com/css/css_table.asp> [Accessed 27 August 2025].-->
+
+    <table>
+        <thead>
+             <!-- w3schools, 2025. HTML <thead> Tag
+            [online] Available at: <https://www.w3schools.com/tags/tag_thead.asp> [Accessed 27 August 2025].-->
+                <tr>
+                    <th>File Name</th>
+                    <th>Size</th>
+                    <th>Last Modified</th>
+                    <th>Action</th>
+                </tr>
+        </thead>
+        <tbody>
+            <!-- w3schools, 2025. HTML <tbody> Tag
+            [online] Available at: <https://www.w3schools.com/tags/tag_tbody.asp> [Accessed 27 August 2025].-->
+            @foreach (var file in Model)
+                {
+                    <tr>
+                        <td> @file.Name </td>
+                        <td> @file.DisplaySize </td>
+                        <td> @file.LastModified?.ToString("g") </td>
+                        <td> <a asp-action="DownloadFile" asp-route-fileName="@file.Name">Download</a> </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No files found or model is null.</p>
+}

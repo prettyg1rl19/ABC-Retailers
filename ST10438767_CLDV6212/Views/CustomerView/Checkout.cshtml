@@ -1,0 +1,42 @@
+﻿@model List<ST10438767_CLDV6212.Models.CartItem>
+
+<h1>Checkout</h1>
+
+<form asp-action="Checkout" method="post" class="p-4" style="background-color:rgba(207, 187, 153); color:rgba(76, 61, 25); border-radius:10px;">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <h4>@Model[i].ProductName</h4>
+        <p>Price: @Model[i].Price.ToString("C") x @Model[i].Quantity</p>
+
+        <input type="hidden" asp-for="@Model[i].ProductId" />
+        <input type="hidden" asp-for="@Model[i].ProductName" />
+        <input type="hidden" asp-for="@Model[i].Price" />
+        <input type="hidden" asp-for="@Model[i].Quantity" />
+
+        <div class="form-group mb-3">
+            <label>Name</label>
+            <input asp-for="@Model[i].CustomerName" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Email</label>
+            <input asp-for="@Model[i].CustomerEmail" class="form-control" readonly />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Phone</label>
+            <input asp-for="@Model[i].CustomerPhone" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Delivery Address</label>
+            <input asp-for="@Model[i].DeliveryAddress" class="form-control" />
+        </div>
+
+        <hr />
+    }
+
+    <h3>Total: @ViewBag.TotalPrice.ToString("C")</h3>
+
+    <button type="submit" class="btn btn-primary w-100" style="background: rgba(136, 144, 99); outline-color: rgba(53, 64, 36); font-family:'Times New Roman', Times, serif">Submit Order</button>
+</form>

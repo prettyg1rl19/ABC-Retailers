@@ -1,52 +1,92 @@
-# CLDV6212
-Welcome to ABC Retailers online! Where quality meets your cart! Now newly upgraded, you can sign in as either an admin or a customer! The admin can:
-- View orders,
-- Add/Delete customers,
-- Delete or edit orders,
-- View docments,
-- Logout,
-- Upload files related to orders.
-- But they cannot enter the Shop!
+using ST10438767_CLDV6212.Models;
+using ST10438767_CLDV6212.Services;
+using System.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
-But, if you are logged in as a customer, you can do the following:
-- Enter the shop,
-- Add items to your cart,
-- View your cart,
-- View your order status,
-- Logout.
-- But as a customer, you will not habve the same priveleges as an admin. You cannot view the other customers, nor add/remove them.
+namespace ST10438767_CLDV6212
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+            var configuration = builder.Configuration;
 
-## Website Link 🌸
-https://st10438767cldv6212wa-cqgwdtawhqfxhda0.canadacentral-01.azurewebsites.net 
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpClient();
 
-## YouTube Video Link (Extra)🌹
-https://youtu.be/FKogGm8YjHI
-Please note that this is just an additional video showing one feature. The main video is in my submitted word document.
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-## Records of successful code 🐰
-<img width="1862" height="927" alt="Image" src="https://github.com/user-attachments/assets/7228e7b7-1e5c-4625-b4a2-ab44cdfe0535" />
-<img width="1865" height="927" alt="Image" src="https://github.com/user-attachments/assets/c5721769-583b-4d3e-8c50-ffa6e91adf39" />
-<img width="1865" height="932" alt="Image" src="https://github.com/user-attachments/assets/257062f3-7a44-49b5-ac38-3b417bd250d4" />
-<img width="1861" height="929" alt="Image" src="https://github.com/user-attachments/assets/241bf2b2-b756-46e4-a4f4-82a36cc3c9d7" />
+            //--- Add HttpClient toconnect to the api ---
+            builder.Services.AddHttpClient("ApiClient", client =>
+            {
+                client.BaseAddress = new Uri(builder.Configuration["ApiSettings:BaseUrl"]!);
+            });
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); //You can set the timeout
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
-## Records of Successful deployment 🐞
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/19fa4dea-977b-4171-b56a-0891b0573e9b" />
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3d9545c5-fa74-4de6-a699-f0d79598d6ec" />
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c4edf202-e2f6-4f1b-bde3-731de4c11118" />
+            //register tablestorage with configuration
+            builder.Services.AddSingleton(new TableStorageService(configuration.GetConnectionString("AzureStorage")));
 
-## AI Annexure and disclosure of AI usage in my assignment 🤖
-Link to chat: https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0
-1.	Used ChatGPT to help me find a slogan for my website – 14 Aug. 25
-2.	Used ChatGPT to help me find colour schemes for the website. The suggestions have been discarded – 14 Aug. 25
-3.	Used ChatGPT to help me with the delete operation for Customers. I messed around with different types of code for this and asked chat if I’m on the right path. I tried to keep it as a last resort, only to help me with the errors I can’t seem to shake by myself. Worked down errors – all on my own – from 7 to 3. And then I didn’t know what to do further. – 19 Aug. 25
-  a.	Update, I was being dumb, and I saw my error. One word. I forgot to change Delete to DeleteCustomer :(
+            //register tablestorage with configuration
+            builder.Services.AddSingleton(new BlobService(configuration.GetConnectionString("AzureStorage")));
 
-## Referencing list:
-Debendra Dash, 2024. Creating Shopping Cart Application From Scratch In MVC – Part Two. [Online]. Available at:
+            //Regsiter QueueService with configuration
+            builder.Services.AddSingleton<QueueService>(sp =>
+            {
+                var connectionString = configuration.GetConnectionString("AzureStorage");
+                return new QueueService(connectionString, "order");
+            });
+
+            //Register fileShareService with configuration
+            builder.Services.AddSingleton<AzureFileShareService>(sp =>
+            {
+                var connectionString = configuration.GetConnectionString("AzureStorage");
+                return new AzureFileShareService(connectionString, "fileshare");
+            });
+
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+            app.UseSession(); //It has to go here but no one will car and ai wont help you :)
+            app.UseAuthorization();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.Run();
+        }
+    }
+}
+
+/*
+ --REFERENCING LIST--
+Debendra Dash, 2024. Creating Shopping Cart Application From Scratch In MVC � Part Two. [Online]. Available at:
 https://www.c-sharpcorner.com/article/creating-shopping-cart-application-from-scratch-in-mvc-part2/ [Accessed 13 November 2025]
 
 Gaurav Gupta, 2013. Compare strings using StringComparison.OrdinalIgnoreCase 
-[online] Available at: <https://www.c-sharpcorner.com/blogs/compare-strings-using-stringcomparisonordinalignorecase1 > [Accessed 19 August 2025]
+[online] Available at: <https://www.c-sharpcorner.com/blogs/compare-strings-using-stringcomparisonordinalignorecase1 > [Accessed 19�August�2025]
 
 IIEVC School of Computer Science, 2025. CLDV6212 Building a Modern Web App with Azure Table Storage & ASP.NET Core MVC - Part 1
 [video online] Available at:<https://www.youtube.com/watch?v=Txp7VYUMBGQ&list=PL480DYS-b_kcZiyuCyHolh6Nad8J_Xnk7&index=3> [Accessed 16 August 2025]. 
@@ -96,7 +136,7 @@ Microsoft, 2025. TableUpdateMode Enum
 Mustafa Can Sener, 2025. User Registration and Login with .NET Core MVC and Entity Framework. [Online]. Available at:
 https://readmedium.com/user-registration-and-login-with-net-core-mvc-and-entity-framework-68793aa97e02 [Accessed 12 November 2025]
 
-Mrzyg?ód, K., 2022. Azure for Developers.
+Mrzyg?�d, K., 2022. Azure for Developers.
 
 OpenAI. 2025. Chat-GPT (OpenAI's GPT-5-turbo model). [Large language model]. 
 Available at: https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0 [Accessed: 14 August 2025]
@@ -130,3 +170,4 @@ w3schools, 2025. HTML <thead> Tag
 
 w3schools, 2025. How TO - Center Images
 [online] Available at: <https://www.w3schools.com/howto/howto_css_image_center.asp> [Accessed 28 August 2025].
+ */
