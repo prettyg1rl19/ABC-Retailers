@@ -23,16 +23,6 @@ https://st10438767cldv6212wa-cqgwdtawhqfxhda0.canadacentral-01.azurewebsites.net
 https://youtu.be/FKogGm8YjHI
 Please note that this is just an additional video showing one feature. The main video is in my submitted word document.
 
-## Records of successful code 🐰
-<img width="1862" height="927" alt="Image" src="https://github.com/user-attachments/assets/7228e7b7-1e5c-4625-b4a2-ab44cdfe0535" />
-<img width="1865" height="927" alt="Image" src="https://github.com/user-attachments/assets/c5721769-583b-4d3e-8c50-ffa6e91adf39" />
-<img width="1865" height="932" alt="Image" src="https://github.com/user-attachments/assets/257062f3-7a44-49b5-ac38-3b417bd250d4" />
-<img width="1861" height="929" alt="Image" src="https://github.com/user-attachments/assets/241bf2b2-b756-46e4-a4f4-82a36cc3c9d7" />
-
-## Records of Successful deployment 🐞
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/19fa4dea-977b-4171-b56a-0891b0573e9b" />
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3d9545c5-fa74-4de6-a699-f0d79598d6ec" />
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c4edf202-e2f6-4f1b-bde3-731de4c11118" />
 
 ## AI Annexure and disclosure of AI usage in my assignment 🤖
 Link to chat: https://chatgpt.com/share/689dd697-22d0-8002-9788-90a36b1cbec0
