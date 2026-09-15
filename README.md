@@ -1,4 +1,4 @@
-<img width="1865" height="932" alt="Screenshot 2025-08-28 180927" src="https://github.com/user-attachments/assets/28fae96f-62dc-4af5-ac02-1e39e328aa1d" /># 🌸 ABC Retailers
+<img width="1473" height="863" alt="Screenshot 2025-11-14 170025" src="https://github.com/user-attachments/assets/eeb44504-fa6b-4ceb-9ec9-0fdbcedcf86a" /># 🌸 ABC Retailers
 
 ## Cloud-Based Retail Web Application
 
@@ -45,21 +45,20 @@ Customers can:
 
 Customers only have access to their own customer functionality and cannot access administrative operations.
 
----
-
 ## 🥀 User Interface
 
-<img width="1672" height="661" alt="Screenshot 2025-11-14 170819" src="https://github.com/user-attachments/assets/946c6195-d1d6-4f61-8761-9db0157f7808" />
-<img width="1674" height="566" alt="Screenshot 2025-11-14 170718" src="https://github.com/user-attachments/assets/fb46cac8-ed93-40bb-b09d-d7d50bfc235c" />
-<img width="1769" height="674" alt="Screenshot 2025-11-14 170652" src="https://github.com/user-attachments/assets/28fe0871-7d0c-452b-a26f-aefde77bcc95" />
-<img width="1660" height="515" alt="Screenshot 2025-11-14 170542" src="https://github.com/user-attachments/assets/8b0c57e7-483b-4a32-946b-8148e6b70b1a" />
-<img width="1346" height="624" alt="Screenshot 2025-11-14 170416" src="https://github.com/user-attachments/assets/087de1e4-0d49-4dea-827f-be676545f5fb" />
-<img width="1239" height="760" alt="Screenshot 2025-11-14 170214" src="https://github.com/user-attachments/assets/5ccd394b-898f-4318-afca-f8f9ec6fa932" />
-<img width="1473" height="863" alt="Screenshot 2025-11-14 170025" src="https://github.com/user-attachments/assets/4e051366-7594-44f3-aaf9-d06a8a8ca4e8" />
-<img width="808" height="380" alt="Screenshot 2025-11-14 170013" src="https://github.com/user-attachments/assets/bb94627e-6549-43e7-9659-44c427719e55" />
-<img width="673" height="557" alt="Screenshot 2025-11-14 165929" src="https://github.com/user-attachments/assets/565586cf-f207-477d-8d49-83c614817c40" />
-<img width="668" height="557" alt="Screenshot 2025-11-14 165823" src="https://github.com/user-attachments/assets/15972c84-0830-45ee-b5f1-7c33fd09d76c" />
-<img width="708" height="554" alt="Screenshot 2025-11-14 165735" src="https://github.com/user-attachments/assets/3a737f57-5c2e-44b9-b837-7eb357599bb7" />
+<img width="708" height="554" alt="Screenshot 2025-11-14 165735" src="https://github.com/user-attachments/assets/548e518a-3653-43aa-810c-8665a4602e94" />
+
+<img width="668" height="557" alt="Screenshot 2025-11-14 165823" src="https://github.com/user-attachments/assets/4beb62a6-0f44-48db-9703-673187add141" />
+
+<img width="673" height="557" alt="Screenshot 2025-11-14 165929" src="https://github.com/user-attachments/assets/5e37c038-3eed-4006-8300-8c4b64f4982b" />
+
+<img width="808" height="380" alt="Screenshot 2025-11-14 170013" src="https://github.com/user-attachments/assets/1413356c-5c2e-4df4-93b6-a305c2b3effc" />
+
+<img width="1473" height="863" alt="Screenshot 2025-11-14 170025" src="https://github.com/user-attachments/assets/e0dc0666-cf56-4c03-a469-4bd621e47e09" />
+
+<img width="1346" height="624" alt="Screenshot 2025-11-14 170416" src="https://github.com/user-attachments/assets/90918e96-22b2-4c58-9994-d56b4c3236c9" />
+
 
 ---
 
@@ -81,6 +80,22 @@ Administrators can:
 * Log out
 
 Administrative functionality is separated from the customer shopping experience.
+
+## 🪿 User Interfaces
+
+<img width="708" height="554" alt="Screenshot 2025-11-14 165735" src="https://github.com/user-attachments/assets/1bf27233-2212-4581-bec9-9de66da79d37" />
+
+<img width="668" height="557" alt="Screenshot 2025-11-14 165823" src="https://github.com/user-attachments/assets/654b123d-d704-48f3-b0c3-30dc7c417cea" />
+
+<img width="673" height="557" alt="Screenshot 2025-11-14 165929" src="https://github.com/user-attachments/assets/bc070d8b-a1fe-4860-af89-6d951ed404de" />
+
+<img width="1660" height="515" alt="Screenshot 2025-11-14 170542" src="https://github.com/user-attachments/assets/d4d29b87-6ddd-4810-89df-25f518846bc5" />
+
+<img width="1769" height="674" alt="Screenshot 2025-11-14 170652" src="https://github.com/user-attachments/assets/ef7aa632-7245-45f6-9ce2-f6c9db848dab" />
+
+<img width="1674" height="566" alt="Screenshot 2025-11-14 170718" src="https://github.com/user-attachments/assets/94b07fa8-42df-4a6b-a890-ffcd891d74f5" />
+
+<img width="1672" height="661" alt="Screenshot 2025-11-14 170819" src="https://github.com/user-attachments/assets/2855d339-9d55-4445-a987-d090b8c36992" />
 
 ---
 
