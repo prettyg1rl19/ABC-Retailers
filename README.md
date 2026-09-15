@@ -1,4 +1,4 @@
-<img width="1473" height="863" alt="Screenshot 2025-11-14 170025" src="https://github.com/user-attachments/assets/eeb44504-fa6b-4ceb-9ec9-0fdbcedcf86a" /># 🌸 ABC Retailers
+# 🌸 ABC Retailers
 
 ## Cloud-Based Retail Web Application
 
