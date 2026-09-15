@@ -1,4 +1,4 @@
-# 🌸 ABC Retailers
+<img width="1865" height="932" alt="Screenshot 2025-08-28 180927" src="https://github.com/user-attachments/assets/28fae96f-62dc-4af5-ac02-1e39e328aa1d" /># 🌸 ABC Retailers
 
 ## Cloud-Based Retail Web Application
 
@@ -13,6 +13,8 @@ The project demonstrates the integration of a web application with multiple Azur
 ## 🌐 Live Website
 
 **https://st10438767cldv6212wa-cqgwdtawhqfxhda0.canadacentral-01.azurewebsites.net**
+
+> **Note:** This website is no longer available due to the hosting having stopped.
 
 ---
 
@@ -42,6 +44,22 @@ Customers can:
 * Log out securely
 
 Customers only have access to their own customer functionality and cannot access administrative operations.
+
+---
+
+## 🥀 User Interface
+
+<img width="1672" height="661" alt="Screenshot 2025-11-14 170819" src="https://github.com/user-attachments/assets/946c6195-d1d6-4f61-8761-9db0157f7808" />
+<img width="1674" height="566" alt="Screenshot 2025-11-14 170718" src="https://github.com/user-attachments/assets/fb46cac8-ed93-40bb-b09d-d7d50bfc235c" />
+<img width="1769" height="674" alt="Screenshot 2025-11-14 170652" src="https://github.com/user-attachments/assets/28fe0871-7d0c-452b-a26f-aefde77bcc95" />
+<img width="1660" height="515" alt="Screenshot 2025-11-14 170542" src="https://github.com/user-attachments/assets/8b0c57e7-483b-4a32-946b-8148e6b70b1a" />
+<img width="1346" height="624" alt="Screenshot 2025-11-14 170416" src="https://github.com/user-attachments/assets/087de1e4-0d49-4dea-827f-be676545f5fb" />
+<img width="1239" height="760" alt="Screenshot 2025-11-14 170214" src="https://github.com/user-attachments/assets/5ccd394b-898f-4318-afca-f8f9ec6fa932" />
+<img width="1473" height="863" alt="Screenshot 2025-11-14 170025" src="https://github.com/user-attachments/assets/4e051366-7594-44f3-aaf9-d06a8a8ca4e8" />
+<img width="808" height="380" alt="Screenshot 2025-11-14 170013" src="https://github.com/user-attachments/assets/bb94627e-6549-43e7-9659-44c427719e55" />
+<img width="673" height="557" alt="Screenshot 2025-11-14 165929" src="https://github.com/user-attachments/assets/565586cf-f207-477d-8d49-83c614817c40" />
+<img width="668" height="557" alt="Screenshot 2025-11-14 165823" src="https://github.com/user-attachments/assets/15972c84-0830-45ee-b5f1-7c33fd09d76c" />
+<img width="708" height="554" alt="Screenshot 2025-11-14 165735" src="https://github.com/user-attachments/assets/3a737f57-5c2e-44b9-b837-7eb357599bb7" />
 
 ---
 
